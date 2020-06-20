@@ -1,0 +1,3 @@
+[submodule "clair-dev-itzel"]
+	path = clair-dev-itzel
+	url = https://github.com/v-itzelsal/clair-dev-itzel.git
