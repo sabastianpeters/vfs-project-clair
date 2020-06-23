@@ -31,14 +31,18 @@ class App extends StatelessWidget {
     ThemeData _getTheme (){
 
         return ThemeData(
+
             primaryColor: Color.fromRGBO(145, 136, 251, 1),
             backgroundColor: Colors.white,
+
             appBarTheme: AppBarTheme(
                 color: Colors.white,
             ),
+
             buttonTheme: ButtonThemeData(
                 buttonColor: Color.fromRGBO(145, 136, 251, 1),
                 textTheme: ButtonTextTheme.primary,
+                padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             )
         );
     }

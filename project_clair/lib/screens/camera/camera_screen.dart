@@ -25,19 +25,52 @@ class CameraScreen extends StatelessWidget {
             ),
 
             body: BodyContainer(<Widget>[
+
                 SizedBox(
                     width: double.infinity,
-                    height: 400,
+                    height: 320,
+
                     child: Container(
-                        
                         decoration: BoxDecoration(
-                            color: Colors.red[400],
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.all(
+                                const Radius.circular(8),
+                            ), 
+                        ),
+
+                        child: Center(
+                            child: Icon(
+                                Icons.camera_alt,
+                                color: Colors.black.withAlpha(100),
+                            ),
+                        ),
+                    )
+                ),
+
+                SizedBox( height: 16 ),
+
+                SizedBox(
+                    width: double.infinity,
+                    height: 128,
+
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.grey.shade400,
                             borderRadius: BorderRadius.all(
                                 const Radius.circular(8),
                             ), 
                         ),
                     )
                 ),
+
+                SizedBox( height: 16 ),
+
+                RaisedButton(
+                    child: Text("I'm Done!"),
+                    onPressed: () => gotoPage(context, WordListScreen()),
+                ),
+
+                Spacer(),
             ])
         );
     }
