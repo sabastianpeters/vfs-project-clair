@@ -78,7 +78,7 @@ class CameraScreen extends StatelessWidget {
                         SizedBox( height: 16 ),
 
                         RaisedButton(
-                            child: Text("I'm Done!"),
+                            child: Text("I'm done!"),
                             onPressed: () => gotoPage(context, NoteListScreen()),
                         ),
 
