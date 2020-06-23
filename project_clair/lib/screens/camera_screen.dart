@@ -34,11 +34,14 @@ class CameraScreen extends StatelessWidget {
 
                             child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.blue.shade100,
+                                    color: Colors.purple.shade100,
                                     borderRadius: BorderRadius.all(
                                         const Radius.circular(8),
                                     ), 
                                 ),
+
+                                
+                                // TODO: put camera here
 
                                 child: Center(
                                     child: Icon(
@@ -57,11 +60,19 @@ class CameraScreen extends StatelessWidget {
 
                             child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.grey.shade400,
+                                    color: Colors.grey.shade300,
                                     borderRadius: BorderRadius.all(
                                         const Radius.circular(8),
                                     ), 
                                 ),
+
+
+                                // TODO: put text output here
+                                
+                                child: Container(
+                                    padding: EdgeInsets.all(16),
+                                    child: Text("My Text Here")
+                                )
                             )
                         ),
 
