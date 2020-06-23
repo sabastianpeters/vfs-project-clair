@@ -2,12 +2,12 @@
     Copyright (C) 2020 Sabastian Peters
 */
 
-import 'package:flutter/material.dart';
+import 'package:project_clair/common.dart';
 
 
 
 // TODO: convert to stateful widget
-class WordListScreen extends StatelessWidget {
+class NoteListScreen extends StatelessWidget {
 
 
     @override
@@ -19,6 +19,13 @@ class WordListScreen extends StatelessWidget {
                 centerTitle: true,
             ),
         );
+    }
+
+
+
+
+    Widget _getCard (NoteData note){
+
     }
 
 }

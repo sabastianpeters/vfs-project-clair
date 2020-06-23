@@ -2,7 +2,6 @@
     Copyright (C) 2020 Sabastian Peters
 */
 
-import 'package:flutter/material.dart';
 import 'package:project_clair/common.dart';
 
 
@@ -67,7 +66,7 @@ class CameraScreen extends StatelessWidget {
 
                 RaisedButton(
                     child: Text("I'm Done!"),
-                    onPressed: () => gotoPage(context, WordListScreen()),
+                    onPressed: () => gotoPage(context, NoteListScreen()),
                 ),
 
                 Spacer(),

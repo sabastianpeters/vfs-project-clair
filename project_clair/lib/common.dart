@@ -5,17 +5,26 @@
 */
 
 
-// ## LIBRARIES ##
+// ## LIBRARY REFERENCES ##
 
 export 'package:flutter/material.dart';
 
 
 
-// ## SCREEN REFERENCE ##
+// ## SCREEN REFERENCES ##
 
-export './screens/camera/camera_screen.dart';
-export './screens/landing/landing_screen.dart';
-export './screens/word_list/word_list_screen.dart';
+export './screens/camera_screen.dart';
+export './screens/landing_screen.dart';
+export './screens/note_list_screen.dart';
+
+
+
+// ## DATA REFERENCES ##
+
+export './data/note_data.dart';
+
+
+
 
 
 
