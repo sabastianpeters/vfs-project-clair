@@ -10,6 +10,15 @@ import 'package:project_clair/common.dart';
 class CameraScreen extends StatelessWidget {
 
 
+    // ## CALLBACKS ##
+
+    void _onDonePressed (BuildContext context){
+        gotoPage(context, NoteListScreen());
+    }
+
+
+    // ## FLUTTER METHODS ##
+
     @override
     Widget build(BuildContext context) {
         
@@ -79,7 +88,7 @@ class CameraScreen extends StatelessWidget {
 
                         RaisedButton(
                             child: Text("I'm done!"),
-                            onPressed: () => gotoPage(context, NoteListScreen()),
+                            onPressed: () => _onDonePressed(context),
                         ),
 
                         Spacer(),

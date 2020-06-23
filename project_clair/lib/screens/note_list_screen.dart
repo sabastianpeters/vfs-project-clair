@@ -10,6 +10,17 @@ import 'package:project_clair/common.dart';
 class NoteListScreen extends StatelessWidget {
 
 
+
+    
+    // ## CALLBACKS ##
+
+    void _onAddPressed (BuildContext context){
+        gotoPage(context, CameraScreen());
+    }
+
+
+    // ## FLUTTER METHODS ##
+
     @override
     Widget build(BuildContext context) {
         
@@ -31,7 +42,7 @@ class NoteListScreen extends StatelessWidget {
 
                         OutlineButton(
                             child: Text("ADD NEW"),
-                            onPressed: () {},
+                            onPressed: () => _onAddPressed(context),
                         ),
 
                         SizedBox( height: 64 ),
