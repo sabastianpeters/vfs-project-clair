@@ -62,19 +62,23 @@ class BodyContainer extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         
-        return Center(
-            child: ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxWidth: 250,
-                    maxHeight: 400
-                ),
-                child: Container(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: children
+        return Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 64, vertical: 16),
+                child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                        maxWidth: 300,
+                        maxHeight: 400
+                    ),
+                    child: Container(
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: children
+                        ),
                     ),
                 ),
-            ),
+            )
         );
     }
 
