@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:project_clair/screens/landing/landing_page.dart';
+import 'package:project_clair/screens/landing/landing_screen.dart';
 
 
 
@@ -21,7 +21,7 @@ class App extends StatelessWidget {
 
         return MaterialApp(
             title: 'Project Clair',
-            home: LandingPage(),
+            home: LandingScreen(),
             theme: _getTheme()
         );
     }
@@ -34,6 +34,9 @@ class App extends StatelessWidget {
         return ThemeData(
             primaryColor: Color.fromRGBO(145, 136, 251, 1),
             backgroundColor: Colors.white,
+            appBarTheme: AppBarTheme(
+                color: Colors.white,
+            ),
             buttonTheme: ButtonThemeData(
                 buttonColor: Color.fromRGBO(145, 136, 251, 1),
                 textTheme: ButtonTextTheme.primary,
