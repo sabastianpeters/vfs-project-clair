@@ -23,9 +23,22 @@ class CameraScreen extends StatelessWidget {
                 ),
                 centerTitle: true,
             ),
-            body: BodyContainer.single(
-                Text("hey")
-            )
+
+            body: BodyContainer(<Widget>[
+                SizedBox(
+                    width: double.infinity,
+                    height: 400,
+                    child: Container(
+                        
+                        decoration: BoxDecoration(
+                            color: Colors.red[400],
+                            borderRadius: BorderRadius.all(
+                                const Radius.circular(8),
+                            ), 
+                        ),
+                    )
+                ),
+            ])
         );
     }
 

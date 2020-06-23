@@ -35,6 +35,7 @@ class LandingScreen extends StatelessWidget {
                         )
                     )
                 ],
+                EdgeInsets.symmetric(horizontal: 64, vertical: 16)
             )
         );
     }

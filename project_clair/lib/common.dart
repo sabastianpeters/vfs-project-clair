@@ -42,14 +42,15 @@ class BodyContainer extends StatelessWidget {
     // ## PUBLIC VARS ##
 
     final List<Widget> children;
+    final EdgeInsets padding;
 
 
     // ## CONSTRUCTORS ##
 
     BodyContainer(
         this.children, 
-        { Key key }
-    ) : super(key: key);
+        [this.padding]
+    );
 
     factory BodyContainer.single( Widget child ){
         return BodyContainer(<Widget>[child]);
@@ -64,16 +65,17 @@ class BodyContainer extends StatelessWidget {
         
         return Align(
             alignment: Alignment.topCenter,
+
             child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 64, vertical: 16),
+                padding: this.padding ?? EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+
                 child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                        maxWidth: 300,
-                        maxHeight: 400
-                    ),
+                    constraints: BoxConstraints( maxWidth: 300 ),
+
                     child: Container(
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            
                             children: children
                         ),
                     ),
