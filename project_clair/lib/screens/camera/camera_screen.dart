@@ -3,6 +3,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:project_clair/common.dart';
 
 
 
@@ -22,6 +23,9 @@ class CameraScreen extends StatelessWidget {
                 ),
                 centerTitle: true,
             ),
+            body: BodyContainer.single(
+                Text("hey")
+            )
         );
     }
 

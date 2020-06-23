@@ -30,3 +30,52 @@ void gotoPage (BuildContext context, Widget page){
         )
     );
 }
+
+
+
+
+// ## UTIL COMPONENTRS ##
+
+class BodyContainer extends StatelessWidget {
+
+
+    // ## PUBLIC VARS ##
+
+    final List<Widget> children;
+
+
+    // ## CONSTRUCTORS ##
+
+    BodyContainer(
+        this.children, 
+        { Key key }
+    ) : super(key: key);
+
+    factory BodyContainer.single( Widget child ){
+        return BodyContainer(<Widget>[child]);
+    }
+
+
+
+    // ## FLUTTER METHODS ##
+
+    @override
+    Widget build(BuildContext context) {
+        
+        return Center(
+            child: ConstrainedBox(
+                constraints: BoxConstraints(
+                    maxWidth: 250,
+                    maxHeight: 400
+                ),
+                child: Container(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: children
+                    ),
+                ),
+            ),
+        );
+    }
+
+}
