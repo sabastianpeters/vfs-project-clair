@@ -1,0 +1,1 @@
+Before publishing, [change all the default flutter icons](https://flutter.dev/docs/development/ui/assets-and-images)
