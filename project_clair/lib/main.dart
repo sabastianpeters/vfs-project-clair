@@ -20,6 +20,7 @@ class App extends StatelessWidget {
 
         return MaterialApp(
             title: 'Project Clair',
+            debugShowCheckedModeBanner: false,
             home: LandingScreen(),
             theme: _getTheme(context)
         );
@@ -43,4 +44,3 @@ class App extends StatelessWidget {
     }
 
 }
-
