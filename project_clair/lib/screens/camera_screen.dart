@@ -97,14 +97,6 @@ class CameraScreen extends StatelessWidget {
                                     child: Text("I'm done!"),
                                     onPressed: () => _onDonePressed(context),
                                 ),
-
-                                SizedBox( width: 8 ),
-
-                                RaisedButton(
-                                    child: Text("Cancel"),
-                                    color: Colors.grey.shade300,
-                                    onPressed: () => _onCancelPressed(context),
-                                ),
                             ],
                         ),
 
