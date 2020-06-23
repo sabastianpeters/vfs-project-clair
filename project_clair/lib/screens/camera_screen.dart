@@ -3,7 +3,8 @@
 */
 
 import 'package:project_clair/common.dart';
-
+import 'package:project_clair/components/camera.dart';
+import 'package:project_clair/components/output_text.dart';
 
 
 // TODO: convert to stateful widget
@@ -57,10 +58,7 @@ class CameraScreen extends StatelessWidget {
                                 // TODO: put camera here
 
                                 child: Center(
-                                    child: Icon(
-                                        Icons.camera_alt,
-                                        color: Colors.black.withAlpha(100),
-                                    ),
+                                    child: CameraComponent(),
                                 ),
                             )
                         ),
@@ -84,7 +82,7 @@ class CameraScreen extends StatelessWidget {
                                 
                                 child: Container(
                                     padding: EdgeInsets.all(16),
-                                    child: Text("My Text Here")
+                                    child: OutputTextComponent()
                                 )
                             )
                         ),
