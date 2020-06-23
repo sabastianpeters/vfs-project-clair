@@ -10,15 +10,28 @@ import 'package:project_clair/common.dart';
 class CameraScreen extends StatelessWidget {
 
 
+    // ## CALLBACKS ##
+
+    void _onDonePressed (BuildContext context){
+        gotoPage(context, NoteListScreen());
+    }
+
+    void _onCancelPressed (BuildContext context){
+        gotoPage(context, NoteListScreen());
+    }
+
+
+
+    // ## FLUTTER METHODS ##
+
     @override
     Widget build(BuildContext context) {
         
         return Scaffold(
             appBar: AppBar(
-                title: Image.network(
-                    "https://framerusercontent.com/projects/piSGerPqUbtGA1EE399C/assets/4096/CQ7n2opjGvmc8NP3IaQWhCeXObM.jpg?Expires=1592957114&Key-Pair-Id=APKAIDY47RVYVKGA6NJQ&Signature=KoNOnCSnkGBOGfqx8Lcf4rUZD3Gi8m~fgI9yIU7SDoFbsQ3h6ktdk51dR9Z-jd3Jy2EnMf2pCzwZHSTM3sz6z1KWsw8WVvRlx73DD~2gBDKv5EdOvtjZOK7q3qt7VgjKHN1EoXlMuEqyCrdPEpEMFbiNOVV47DoAyAHjEl6uggGWTr9loOwqbDsxqa7B7I5zBnF~12w38u0ElMQyAhKeHu0mpjziapEKiBGW7TnJ2MFB6uHXOMiHS9pd8KNQwta2LP0mbX5NC0XxQY8ZiC4OUWVGnwvurtz4MZpCTIyeNGuqYu9JzFRn~k7hCXGahTps0IhTPUh37UbBQ-wDsXOMWw__",
-                    width: 177 * 1.2,
-                    height: 107 * 1.2,
+                title: Image.asset(
+                    "assets/logo_icon.png",
+                    height: 32,
                 ),
                 centerTitle: true,
             ),
@@ -78,9 +91,13 @@ class CameraScreen extends StatelessWidget {
 
                         SizedBox( height: 16 ),
 
-                        RaisedButton(
-                            child: Text("I'm Done!"),
-                            onPressed: () => gotoPage(context, NoteListScreen()),
+                        Row(
+                            children: <Widget>[
+                                RaisedButton(
+                                    child: Text("I'm done!"),
+                                    onPressed: () => _onDonePressed(context),
+                                ),
+                            ],
                         ),
 
                         Spacer(),

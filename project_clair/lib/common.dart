@@ -37,13 +37,25 @@ export './components/note_list.dart';
 
 import 'package:flutter/material.dart';
 
+// goes to a new page (doesn't allow going back)
 void gotoPage (BuildContext context, Widget page){
+    Navigator.pushAndRemoveUntil(
+        context, 
+        MaterialPageRoute<void>(
+            builder: (BuildContext context) => page
+        ), 
+        (r) => false
+    );
+}
+
+// opens up a page (allows going back)
+void openPage (BuildContext context, Widget page){
     Navigator.of(context).push(
         MaterialPageRoute<void>(
             builder: (BuildContext context) => page
         )
     );
-}
+} 
 
 
 
