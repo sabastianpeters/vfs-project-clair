@@ -21,23 +21,18 @@ class App extends StatelessWidget {
         return MaterialApp(
             title: 'Project Clair',
             home: LandingScreen(),
-            theme: _getTheme()
+            theme: _getTheme(context)
         );
     }
 
 
 
 
-    ThemeData _getTheme (){
+    ThemeData _getTheme (BuildContext context){
 
         return ThemeData(
 
-            primaryColor: Color.fromRGBO(145, 136, 251, 1),
-            backgroundColor: Colors.white,
-
-            appBarTheme: AppBarTheme(
-                color: Colors.white,
-            ),
+            primaryColor: Colors.white,
 
             buttonTheme: ButtonThemeData(
                 buttonColor: Color.fromRGBO(145, 136, 251, 1),
