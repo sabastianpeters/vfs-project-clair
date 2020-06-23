@@ -5,17 +5,31 @@
 */
 
 
-// ## LIBRARIES ##
+// ## LIBRARY REFERENCES ##
 
 export 'package:flutter/material.dart';
 
 
 
-// ## SCREEN REFERENCE ##
+// ## SCREEN REFERENCES ##
 
-export './screens/camera/camera_screen.dart';
-export './screens/landing/landing_screen.dart';
-export './screens/word_list/word_list_screen.dart';
+export './screens/camera_screen.dart';
+export './screens/landing_screen.dart';
+export './screens/note_list_screen.dart';
+
+
+
+// ## DATA REFERENCES ##
+
+export './data/note_data.dart';
+
+
+
+// ## COMPONENT REFERENCES ##
+
+export './components/note_list.dart';
+
+
 
 
 
@@ -41,20 +55,16 @@ class BodyContainer extends StatelessWidget {
 
     // ## PUBLIC VARS ##
 
-    final List<Widget> children;
+    final Widget child;
     final EdgeInsets padding;
 
 
     // ## CONSTRUCTORS ##
 
     BodyContainer(
-        this.children, 
+        this.child, 
         [this.padding]
     );
-
-    factory BodyContainer.single( Widget child ){
-        return BodyContainer(<Widget>[child]);
-    }
 
 
 
@@ -73,11 +83,7 @@ class BodyContainer extends StatelessWidget {
                     constraints: BoxConstraints( maxWidth: 300 ),
 
                     child: Container(
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            
-                            children: children
-                        ),
+                        child: this.child
                     ),
                 ),
             )
