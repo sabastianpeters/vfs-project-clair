@@ -18,7 +18,7 @@ class NoteListScreen extends StatelessWidget {
                 title: Text("Your Phrases"),
                 centerTitle: true,
             ),
-            body: NoteList(),
+            body: BodyContainer(NoteList()),
         );
     }
 

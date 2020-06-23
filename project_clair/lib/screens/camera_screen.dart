@@ -23,54 +23,59 @@ class CameraScreen extends StatelessWidget {
                 centerTitle: true,
             ),
 
-            body: BodyContainer(<Widget>[
+            body: BodyContainer(
+                Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                
+                        SizedBox(
+                            width: double.infinity,
+                            height: 320,
 
-                SizedBox(
-                    width: double.infinity,
-                    height: 320,
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blue.shade100,
+                                    borderRadius: BorderRadius.all(
+                                        const Radius.circular(8),
+                                    ), 
+                                ),
 
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue.shade100,
-                            borderRadius: BorderRadius.all(
-                                const Radius.circular(8),
-                            ), 
+                                child: Center(
+                                    child: Icon(
+                                        Icons.camera_alt,
+                                        color: Colors.black.withAlpha(100),
+                                    ),
+                                ),
+                            )
                         ),
 
-                        child: Center(
-                            child: Icon(
-                                Icons.camera_alt,
-                                color: Colors.black.withAlpha(100),
-                            ),
+                        SizedBox( height: 16 ),
+
+                        SizedBox(
+                            width: double.infinity,
+                            height: 128,
+
+                            child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade400,
+                                    borderRadius: BorderRadius.all(
+                                        const Radius.circular(8),
+                                    ), 
+                                ),
+                            )
                         ),
-                    )
-                ),
 
-                SizedBox( height: 16 ),
+                        SizedBox( height: 16 ),
 
-                SizedBox(
-                    width: double.infinity,
-                    height: 128,
-
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade400,
-                            borderRadius: BorderRadius.all(
-                                const Radius.circular(8),
-                            ), 
+                        RaisedButton(
+                            child: Text("I'm Done!"),
+                            onPressed: () => gotoPage(context, NoteListScreen()),
                         ),
-                    )
-                ),
 
-                SizedBox( height: 16 ),
-
-                RaisedButton(
-                    child: Text("I'm Done!"),
-                    onPressed: () => gotoPage(context, NoteListScreen()),
-                ),
-
-                Spacer(),
-            ])
+                        Spacer(),
+                    ]   
+                )
+            )
         );
     }
 
