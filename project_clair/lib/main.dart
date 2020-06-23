@@ -3,8 +3,7 @@
 */
 
 import 'package:flutter/material.dart';
-
-import 'package:project_clair/screens/landing/landing_screen.dart';
+import 'package:project_clair/common.dart';
 
 
 
