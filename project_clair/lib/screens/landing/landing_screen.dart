@@ -2,7 +2,7 @@
     Copyright (C) 2020 Sabastian Peters
 */
 
-import 'package:flutter/material.dart';
+import 'package:project_clair/common.dart';
 
 
 
@@ -31,12 +31,21 @@ class LandingScreen extends StatelessWidget {
                         child: RaisedButton(
                             child: Text("Get Started"),
                             padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                            onPressed: () => {},
+                            onPressed: () => _gotoCameraScreen(context),
                         )
                     )
                 ],
             )
         );
+    }
+
+
+
+    // ## PRIVATE UTIL METHODS ##
+
+
+    void _gotoCameraScreen (BuildContext context){
+        gotoPage(context, CameraScreen());
     }
 
 
