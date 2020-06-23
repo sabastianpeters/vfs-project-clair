@@ -16,6 +16,11 @@ class CameraScreen extends StatelessWidget {
         gotoPage(context, NoteListScreen());
     }
 
+    void _onCancelPressed (BuildContext context){
+        gotoPage(context, NoteListScreen());
+    }
+
+
 
     // ## FLUTTER METHODS ##
 
@@ -86,9 +91,21 @@ class CameraScreen extends StatelessWidget {
 
                         SizedBox( height: 16 ),
 
-                        RaisedButton(
-                            child: Text("I'm done!"),
-                            onPressed: () => _onDonePressed(context),
+                        Row(
+                            children: <Widget>[
+                                RaisedButton(
+                                    child: Text("I'm done!"),
+                                    onPressed: () => _onDonePressed(context),
+                                ),
+
+                                SizedBox( width: 8 ),
+
+                                RaisedButton(
+                                    child: Text("Cancel"),
+                                    color: Colors.grey.shade300,
+                                    onPressed: () => _onCancelPressed(context),
+                                ),
+                            ],
                         ),
 
                         Spacer(),
