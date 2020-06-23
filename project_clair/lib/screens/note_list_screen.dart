@@ -15,10 +15,29 @@ class NoteListScreen extends StatelessWidget {
         
         return Scaffold(
             appBar: AppBar(
-                title: Text("Your Phrases"),
+                title: Text("Your Notes"),
                 centerTitle: true,
             ),
-            body: BodyContainer(NoteList()),
+            body: BodyContainer(
+                Column(
+                    children: <Widget>[
+                        
+                        
+                        Flexible(
+                            child: NoteList()
+                        ),
+
+                        SizedBox( height: 16 ),
+
+                        OutlineButton(
+                            child: Text("ADD NEW"),
+                            onPressed: () {},
+                        ),
+
+                        SizedBox( height: 64 ),
+                    ],
+                ),
+            ),
         );
     }
 

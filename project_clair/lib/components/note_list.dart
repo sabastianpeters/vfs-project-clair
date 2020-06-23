@@ -35,7 +35,7 @@ class NoteListState extends State<NoteList> {
         List<NoteData> noteList = [
             NoteData("abc 123"),
             NoteData("this is a note"),
-            NoteData("this is another note\nline\nline\nline\nline\nline"),
+            NoteData("this is another note\nline\nline\nline\nline\nline"),-
         ];
 
         
@@ -83,7 +83,7 @@ class NoteListState extends State<NoteList> {
                                     onPressed: () {},
                                 ),
 
-                                
+
                             ],
                         ),
 
