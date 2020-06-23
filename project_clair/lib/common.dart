@@ -25,6 +25,11 @@ export './data/note_data.dart';
 
 
 
+// ## COMPONENT REFERENCES ##
+
+export './components/note_list.dart';
+
+
 
 
 

@@ -18,14 +18,8 @@ class NoteListScreen extends StatelessWidget {
                 title: Text("Your Phrases"),
                 centerTitle: true,
             ),
+            body: NoteList(),
         );
-    }
-
-
-
-
-    Widget _getCard (NoteData note){
-
     }
 
 }
