@@ -9,7 +9,7 @@
 > 
 > Built using [Flutter](https://flutter.dev/) and [TensorFlowLite](https://www.tensorflow.org/lite) with samples from [Kaggle](https://www.kaggle.com/datamunge/sign-language-mnist).
 >
-> It has been tested to run on both emulated and real devices for Android and iOS.
+> It has been tested to run on both emulated and real devices for Android and iOS. Note that the camera functionality won't work on emulated devices
 
 
 ### Table of Contents
