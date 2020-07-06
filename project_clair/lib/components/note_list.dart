@@ -37,8 +37,13 @@ class NoteListState extends State<NoteList> {
 
     void _onDeletePressed (BuildContext context, int index){
         
-        // removes item at index
-        Provider.of<NoteListModel>(context, listen: false).removeAt(index);
+        // removes item at index if desired
+        _showVerifyDeleteDialog(
+            context,
+            () => Provider.of<NoteListModel>(context, listen: false).removeAt(index), /// removes if delete verified
+            () {}
+        );
+        
     }
 
 
@@ -102,6 +107,36 @@ class NoteListState extends State<NoteList> {
         );
     }
 
+    
+    void _showVerifyDeleteDialog (BuildContext context, void Function() onYes, void Function() onNo,){
 
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+
+                return AlertDialog(
+                    title: Text("Are you sure you want to delete this note?"),
+                    actions: <Widget>[
+
+                        FlatButton(
+                            child: Text("DELETE"),
+                            onPressed: (){
+                                onYes();
+                                Navigator.of(context).pop(); /// closes the menu
+                            },
+                        ),
+
+                        FlatButton(
+                            child: Text("Cancel"),
+                            onPressed: (){
+                                onNo();
+                                Navigator.of(context).pop(); /// closes the menu
+                            },
+                        ),
+                    ],
+                );
+            }
+        );
+    }
 
 }
