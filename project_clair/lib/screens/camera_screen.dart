@@ -8,6 +8,11 @@ import 'package:project_clair/common.dart';
 class CameraScreen extends StatelessWidget {
 
 
+    CameraScreen(){
+        OutputText.value = ""; /// clears the output text each time we visit this screen
+    }
+
+
     // ## CALLBACKS ##
 
     void _onDonePressed (BuildContext context){
