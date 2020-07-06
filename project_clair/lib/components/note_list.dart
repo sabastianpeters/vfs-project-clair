@@ -17,6 +17,8 @@ class NoteList extends StatefulWidget {
 class NoteListState extends State<NoteList> {
 
 
+    UnmodifiableListView<NoteData> _noteList;
+
 
     // ## FLUTTER METHODS ##
 
@@ -33,20 +35,31 @@ class NoteListState extends State<NoteList> {
 
     // ## PRIVATE UTIL METHODS ##
 
+    void _onDeletePressed (BuildContext context, int index){
+        
+        // removes item at index
+        Provider.of<NoteListModel>(context, listen: false).removeAt(index);
+    }
+
+
     Widget _buildList (BuildContext context, UnmodifiableListView<NoteData> noteList){
         
+        _noteList = noteList;
+
         return ListView.builder(
             itemCount: noteList.length * 2,
             itemBuilder: (context, i){
 
                 if(i.isOdd) return SizedBox( height: 16 ); /// spacing between notes
-                return _buildCard(context, noteList[i ~/ 2]); /// the cards themselves
+                return _buildCard(context, i ~/ 2); /// the cards themselves
             }
         );
     }
     
 
-    Widget _buildCard (BuildContext context, NoteData note){
+    Widget _buildCard (BuildContext context, int index){
+
+        NoteData note = _noteList[index];
 
         return Card(
             child: Container(
@@ -76,7 +89,7 @@ class NoteListState extends State<NoteList> {
                                         Icons.delete,
                                         color: Color.fromRGBO(224, 66, 110, 1),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () => _onDeletePressed(context, index),
                                 ),
 
 
@@ -88,5 +101,7 @@ class NoteListState extends State<NoteList> {
             )
         );
     }
+
+
 
 }

@@ -22,6 +22,11 @@ class NoteListModel extends ChangeNotifier {
         notifyListeners(); /// tells relevant widgets to rebuild
     }
 
+    void removeAt (int index){
+        _noteList.removeAt(index);
+        notifyListeners();
+    }
+
     void removeAll (){
         _noteList.clear();
         notifyListeners();
