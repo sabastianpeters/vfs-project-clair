@@ -22,7 +22,10 @@ class NoteListState extends State<NoteList> {
 
     @override
     Widget build(BuildContext context) {
-        return _buildList(context);
+        return Consumer<NoteListModel>(
+            builder: (context, model, child) => _buildList(context, model.noteList), /// builds list with provided notes
+        );
+        
     }
 
 
@@ -30,14 +33,7 @@ class NoteListState extends State<NoteList> {
 
     // ## PRIVATE UTIL METHODS ##
 
-    Widget _buildList (BuildContext context){
-
-        List<NoteData> noteList = [
-            NoteData("abc 123"),
-            NoteData("this is a note"),
-            NoteData("this is another note\nline\nline\nline\nline\nline"),
-        ];
-
+    Widget _buildList (BuildContext context, UnmodifiableListView<NoteData> noteList){
         
         return ListView.builder(
             itemCount: noteList.length * 2,
