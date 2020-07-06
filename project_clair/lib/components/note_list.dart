@@ -75,13 +75,10 @@ class NoteListState extends State<NoteList> {
                         
                         // Body Text
 
-                        Container(
+                        Expanded(child: Container(
                             padding: EdgeInsets.all(16),
                             child: Text(note.body),
-                        ),
-
-
-                        Spacer(),
+                        )),
 
                         Column(
                             mainAxisAlignment: MainAxisAlignment.end, 
