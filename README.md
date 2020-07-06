@@ -4,8 +4,8 @@
 > 
 > A collaboration project between Digital Design and Programming students from VFS
 > - Concept and design done by Pradhiksha Yogasaravanan 
-> - Machine learning and core functionality done by Itzel Salvador.
-> - UI programming done by Sabastian Peters.
+> - Machine learning integration and training done by Itzel Salvador.
+> - UI programming & App State done by Sabastian Peters.
 > 
 > Built using [Flutter](https://flutter.dev/) and [TensorFlowLite](https://www.tensorflow.org/lite) with samples from [Kaggle](https://www.kaggle.com/datamunge/sign-language-mnist).
 >
@@ -22,16 +22,16 @@
 ## Running the App
 
 - download / clone project from git
-- open up the project in prefered editor
+- open up the project folder called `project_clair` in prefered editor
   - [here's google's documentation on setting up your choice of editor](https://flutter.dev/docs/get-started/editor)
 - the guide should also have instructions for running the app
   - in VSCode, press F5 to run the app
-  - `flutter run` from the command line should also work
+  - `flutter run` from the command line inside the `project_clair` folder should also work
 
 
 
 ## Screenshots
 
 ![landing page](./readme-assets/landing.png)
-![camera page](./readme-assets/camera.png)
 ![note-list page](./readme-assets/note-list.png)
+![camera page](./readme-assets/camera.png)
