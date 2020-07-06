@@ -13,6 +13,9 @@ class NoteListModel extends ChangeNotifier {
     final List<NoteData> _noteList = [];
     UnmodifiableListView<NoteData> get noteList => UnmodifiableListView(_noteList);
 
+    NoteListModel(){
+        add(new NoteData("hey"));
+    }
 
     void add(NoteData note){
         _noteList.add(note);
