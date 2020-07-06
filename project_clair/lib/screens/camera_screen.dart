@@ -5,7 +5,6 @@
 import 'package:project_clair/common.dart';
 
 
-// TODO: convert to stateful widget
 class CameraScreen extends StatelessWidget {
 
 
@@ -54,9 +53,6 @@ class CameraScreen extends StatelessWidget {
                                     ), 
                                 ),
 
-                                
-                                // TODO: put camera here
-
                                 child: Center(
                                     child: CameraComponent(),
                                 ),
@@ -76,9 +72,6 @@ class CameraScreen extends StatelessWidget {
                                         const Radius.circular(8),
                                     ), 
                                 ),
-
-
-                                // TODO: put text output here
                                 
                                 child: Container(
                                     padding: EdgeInsets.all(16),

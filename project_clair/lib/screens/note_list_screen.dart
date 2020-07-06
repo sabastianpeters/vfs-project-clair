@@ -6,7 +6,6 @@ import 'package:project_clair/common.dart';
 
 
 
-// TODO: convert to stateful widget
 class NoteListScreen extends StatelessWidget {
 
 
