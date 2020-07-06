@@ -14,7 +14,8 @@ class NoteListModel extends ChangeNotifier {
     UnmodifiableListView<NoteData> get noteList => UnmodifiableListView(_noteList);
 
     NoteListModel(){
-        add(new NoteData("hey"));
+        add(NoteData("Hi there! This is a note. You can press the trash bin to delete me."));
+        add(NoteData("Try adding a note using the button below!"));
     }
 
     void add(NoteData note){
