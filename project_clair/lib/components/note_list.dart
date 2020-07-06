@@ -119,6 +119,7 @@ class NoteListState extends State<NoteList> {
                     actions: <Widget>[
 
                         FlatButton(
+                            color: Color.fromRGBO(224, 66, 110, 1),
                             child: Text("DELETE"),
                             onPressed: (){
                                 onYes();
