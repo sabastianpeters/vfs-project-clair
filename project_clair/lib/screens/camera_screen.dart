@@ -3,8 +3,6 @@
 */
 
 import 'package:project_clair/common.dart';
-import 'package:project_clair/components/camera.dart';
-import 'package:project_clair/components/output_text.dart';
 
 
 // TODO: convert to stateful widget
@@ -14,10 +12,12 @@ class CameraScreen extends StatelessWidget {
     // ## CALLBACKS ##
 
     void _onDonePressed (BuildContext context){
-        gotoPage(context, NoteListScreen());
-    }
 
-    void _onCancelPressed (BuildContext context){
+        // Adds the new note to the model
+        Provider.of<NoteListModel>(context, listen: false).add(
+            NoteData(OutputText.value)
+        );
+
         gotoPage(context, NoteListScreen());
     }
 

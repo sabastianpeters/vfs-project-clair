@@ -31,7 +31,14 @@ export './data/note_data.dart';
 // ## COMPONENT REFERENCES ##
 
 export './components/note_list.dart';
+export './components/output_text.dart';
+export './components/camera.dart';
 
+
+
+// ## HELPERS ##
+
+export 'package:project_clair/helpers/output_helper.dart';
 
 
 
