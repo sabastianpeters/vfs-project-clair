@@ -24,6 +24,7 @@
 - download / clone project from git
 - open up the project folder called `project_clair` in prefered editor
   - [here's google's documentation on setting up your choice of editor](https://flutter.dev/docs/get-started/editor)
+- get the flutter packages by running `flutter pub get` inside of `project_clair`
 - the guide should also have instructions for running the app
   - in VSCode, press F5 to run the app
   - `flutter run` from the command line inside the `project_clair` folder should also work
