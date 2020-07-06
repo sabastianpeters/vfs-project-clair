@@ -39,7 +39,7 @@ class LandingScreen extends StatelessWidget {
                             child: RaisedButton(
                                 child: Text("Get Started"),
                                 padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                                onPressed: () => gotoPage(context, CameraScreen()),
+                                onPressed: () => gotoPage(context, NoteListScreen()),
                             )
                         )
                     ],

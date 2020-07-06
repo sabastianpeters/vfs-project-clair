@@ -3,21 +3,25 @@
 */
 
 import 'package:project_clair/common.dart';
-import 'package:project_clair/components/camera.dart';
-import 'package:project_clair/components/output_text.dart';
 
 
-// TODO: convert to stateful widget
 class CameraScreen extends StatelessWidget {
+
+
+    CameraScreen(){
+        OutputText.value = ""; /// clears the output text each time we visit this screen
+    }
 
 
     // ## CALLBACKS ##
 
     void _onDonePressed (BuildContext context){
-        gotoPage(context, NoteListScreen());
-    }
 
-    void _onCancelPressed (BuildContext context){
+        // Adds the new note to the model
+        Provider.of<NoteListModel>(context, listen: false).add(
+            NoteData(OutputText.value)
+        );
+
         gotoPage(context, NoteListScreen());
     }
 
@@ -54,9 +58,6 @@ class CameraScreen extends StatelessWidget {
                                     ), 
                                 ),
 
-                                
-                                // TODO: put camera here
-
                                 child: Center(
                                     child: CameraComponent(),
                                 ),
@@ -76,9 +77,6 @@ class CameraScreen extends StatelessWidget {
                                         const Radius.circular(8),
                                     ), 
                                 ),
-
-
-                                // TODO: put text output here
                                 
                                 child: Container(
                                     padding: EdgeInsets.all(16),

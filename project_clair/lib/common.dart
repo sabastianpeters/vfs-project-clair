@@ -8,6 +8,8 @@
 // ## LIBRARY REFERENCES ##
 
 export 'package:flutter/material.dart';
+export 'package:provider/provider.dart';
+export 'dart:collection';
 
 
 
@@ -21,6 +23,7 @@ export './screens/note_list_screen.dart';
 
 // ## DATA REFERENCES ##
 
+export './data/note_list_model.dart';
 export './data/note_data.dart';
 
 
@@ -28,7 +31,14 @@ export './data/note_data.dart';
 // ## COMPONENT REFERENCES ##
 
 export './components/note_list.dart';
+export './components/output_text.dart';
+export './components/camera.dart';
 
+
+
+// ## HELPERS ##
+
+export 'package:project_clair/helpers/output_helper.dart';
 
 
 
